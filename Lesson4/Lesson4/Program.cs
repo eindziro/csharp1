@@ -10,27 +10,27 @@ namespace Lesson4
     {
 
 
-        #region T1
-        static void PairCount()
-        {
+        
 
-        }
-        #endregion
+        
         static void Main(string[] args)
         {
 
             int[] arr = { 6, 2, 9, -3, 6 };
             StaticClass.PairCountProc(arr);
+            
+            string qpath = @"D:\GeekBrains\Trash\q.txt";
+
+
+
+            int[] tmp;
+            tmp = StaticClass.ReadTXT(qpath);
+            StaticClass.PairCountProc(tmp);
+            //Console.WriteLine(System.IO.File.Exists(qpath));
             Console.ReadKey();
         }
 
-        static int[] ReadArr(string path)
-        {
-            string tmp;
-            System.IO.File.ReadAllLines(path);
-            int[] arr = {1,2 };
-            return arr;
-        }
+        
         
     }
 }
