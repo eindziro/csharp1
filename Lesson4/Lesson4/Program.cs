@@ -52,6 +52,20 @@ namespace Lesson4
             Console.WriteLine("MAX = {0}   MIN = {1}    Index = {2},{3}", max, min, index[0], index[1]);
 
 
+            ArrayXY tmp = new ArrayXY(@"D:\GeekBrains\Trash\q.txt");
+            for (int i = 0; i < tmp.Array.GetLength(0); i++)
+            {
+                for (int j = 0; j < tmp.Array.GetLength(1); j++)
+                {
+                    Console.Write($" {tmp.Array[i, j]} ");
+
+                }
+                Console.WriteLine();
+            }
+
+            tmp.WriteFile(@"D:\GeekBrains\Trash\output.txt");
+
+
 
             Console.ReadKey();
 

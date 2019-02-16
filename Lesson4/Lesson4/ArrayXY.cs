@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Lesson4
 {
@@ -16,7 +17,7 @@ namespace Lesson4
 
         public int Max { get { return FindMax(); } set { } }
 
-        public int Min { get { return FindMin(); } set { } }
+        public int Min { get => FindMin(); }
 
 
         public ArrayXY(int x, int y)
@@ -32,6 +33,32 @@ namespace Lesson4
 
             }
 
+        }
+
+        public ArrayXY(string path )
+        {
+            var str = File.ReadAllLines(path);
+            var tmp = str[0].Split(',', ' ', (char)13);
+            array = new int[str.Length, tmp.Length];
+            for (int j = 0; j < str.Length; j++)
+            {
+                var s = str[j].Split(',', ' ', (char)13);
+
+                for (int i = 0; i < tmp.Length; i++)
+                {
+                    array[j, i] = int.Parse(s[i]);
+
+                }
+
+            }
+            
+
+            
+           
+
+            
+            
+              
         }
 
 
@@ -108,6 +135,24 @@ namespace Lesson4
             }
 
             return index;
+
+        }
+
+        public void WriteFile(string path)
+        {
+            StreamWriter sr = new StreamWriter(path);
+
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    sr.Write($"{array[i, j]} ");
+
+                }
+                sr.WriteLine();
+                
+            }
+            sr.Close();
 
         }
 
