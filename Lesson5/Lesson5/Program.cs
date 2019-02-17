@@ -10,6 +10,11 @@ namespace Lesson5
     {
         static void Main(string[] args)
         {
+            Account acc = new Account("qwer12aa", "qwer12");
+            Console.WriteLine(acc.Check());
+            Console.WriteLine(acc.CheckRegex());
+
+            Console.ReadKey();
         }
     }
 }
