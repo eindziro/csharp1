@@ -9,9 +9,21 @@ namespace Lesson5
     class People
     {
 
-        private int mark1, mark2, mark3;
-        private double averMark;
+        public string Name { get; set; }
 
+        public string Surname { get; set; }
 
+        public int Mark1 { get; set; }
+
+        public int Mark2 { get; set; }
+
+        public int Mark3 { get; set; }
+
+        public double Marks { get { return (Mark1 + Mark2 + Mark3) / 3; } }
+
+        public override string ToString()
+        {
+            return $"{Name} {Surname} : {Mark1}  {Mark2}  {Mark3}  {Marks.ToString("#.##")} ";
+        }
     }
 }
