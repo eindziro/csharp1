@@ -36,6 +36,21 @@ namespace Lesson5
             //string b = "dcba";
             //Console.WriteLine(a.OrderBy(e => e).SequenceEqual(b.OrderBy(e=>e)));
             //Console.ReadKey();
+            Random rand = new Random();
+            WorkingClass workingClass = new WorkingClass
+                (
+                new People() { Name = $"Ivan", Surname = "Ivanov", Mark1 = rand.Next(5), Mark2 = rand.Next(5), Mark3 = rand.Next(5) },
+                new People() { Name = $"Ivan", Surname = "Ivanov", Mark1 = rand.Next(5), Mark2 = rand.Next(5), Mark3 = rand.Next(5) },
+                new People() { Name = $"Ivan", Surname = "Ivanov", Mark1 = rand.Next(5), Mark2 = rand.Next(5), Mark3 = rand.Next(5) },
+                new People() { Name = $"Ivan", Surname = "Ivanov", Mark1 = rand.Next(5), Mark2 = rand.Next(5), Mark3 = rand.Next(5) },
+                new People() { Name = $"Ivan", Surname = "Ivanov", Mark1 = rand.Next(5), Mark2 = rand.Next(5), Mark3 = rand.Next(5) },
+                new People() { Name = $"Ivan", Surname = "Ivanov", Mark1 = rand.Next(5), Mark2 = rand.Next(5), Mark3 = rand.Next(5) },
+                new People() { Name = $"Ivan", Surname = "Ivanov", Mark1 = rand.Next(5), Mark2 = rand.Next(5), Mark3 = rand.Next(5) },
+                new People() { Name = $"Ivan", Surname = "Ivanov", Mark1 = rand.Next(5), Mark2 = rand.Next(5), Mark3 = rand.Next(5) }
+
+                );
+            workingClass.Worst();
+            Console.ReadKey();
 
             #endregion
 

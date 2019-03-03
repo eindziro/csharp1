@@ -9,6 +9,7 @@ namespace Lesson5
     class People
     {
 
+        public int a;
         public string Name { get; set; }
 
         public string Surname { get; set; }
@@ -19,7 +20,7 @@ namespace Lesson5
 
         public int Mark3 { get; set; }
 
-        public double Marks { get { return (Mark1 + Mark2 + Mark3) / 3; } }
+        public double Marks { get { return (Mark1 + Mark2 + Mark3) / 3.0; } }
 
         public override string ToString()
         {
